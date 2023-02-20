@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "sharedServices",
+    "title": "List of supported generated services",
+    "description": "Initialize a new project",
+    "type": "array",
+    "uniqueItems": true,
+    "items": {
+        "type": "string"
+    },
+    "x-prompt": {
+        "message": "Which module would you like to select?",
+        "type": "list",
+        "multiselect": true,
+        "items": [
+            "Forms Service",
+            "Shared Service"
+        ]
+    }
+}

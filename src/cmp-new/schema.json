@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "cmpNew",
+    "title": "ng compie new options schema",
+    "type": "object",
+    "description": "Initialize a new project",
+    "required": [
+        "name"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the project",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            }
+        },
+        "includeShared": {
+            "type": "boolean",
+            "description": "Include shared folder with generated components & services",
+            "x-prompt": "Genearte shared folder?:",
+            "$default": {
+                "$source": "argv",
+                "index": 1
+            }
+        }
+    }
+}

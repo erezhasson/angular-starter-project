@@ -1,0 +1,15 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "cmp-new": {
+      "description": "Create new Angular project using predefined components.",
+      "factory": "./cmp-new/index#cmpNew",
+      "schema": "./cmp-new/schema.json"
+    },
+    "shared-services": {
+      "description": "List of supported generated services",
+      "factory": "./shared-services/index#sharedServices",
+      "schema": "./shared-services/schema.json"
+    }
+  }
+}
