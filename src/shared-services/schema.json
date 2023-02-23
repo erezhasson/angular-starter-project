@@ -1,20 +1,27 @@
 {
     "$schema": "http://json-schema.org/schema",
     "$id": "sharedServices",
-    "title": "List of supported generated services",
-    "description": "Initialize a new project",
-    "type": "array",
-    "uniqueItems": true,
-    "items": {
-        "type": "string"
-    },
-    "x-prompt": {
-        "message": "Which module would you like to select?",
-        "type": "list",
-        "multiselect": true,
-        "items": [
-            "Forms Service",
-            "Shared Service"
-        ]
+    "description": "Select which services to generate",
+    "type": "object",
+    "properties": {
+        "services": {
+            "type": "array",
+            "description": "List of services to generate",
+            "uniqueItems": true,
+            "x-prompt": {
+                "message": "Which services would you like to use?",
+                "type": "list",
+                "items": [
+                    {
+                        "value": "form",
+                        "label": "Form Service"
+                    },
+                    {
+                        "value": "modal",
+                        "label": "Modal Service"
+                    }
+                ]
+            }
+        }
     }
 }
